@@ -1,0 +1,9 @@
+{
+	"name": "covid-project-nah-adf",
+	"location": "southeastasia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "db4ee651-d4d8-47f6-8446-f16f817cbdac",
+		"tenantId": "2888a1be-b557-439a-8bdc-fcc4bb5ad902"
+	}
+}
