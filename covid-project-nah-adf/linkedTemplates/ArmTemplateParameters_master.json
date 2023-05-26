@@ -18,13 +18,7 @@
 			"value": "/subscriptions/899bd514-6486-4374-93e7-059b48eb5161/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidprojectnahsa"
 		},
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
-			"value": "https://github.com"
-		},
-		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sourceRelativeURL": {
-			"value": "cloudboxacademy/covid19/raw/main/ecdc_data/hospital_admissions.csv"
-		},
-		"tr_ingest_hospital_admissions_data_properties_pl_ingest_ecdc_data_parameters_sinkFileName": {
-			"value": "hospital_admissions.csv"
+			"value": "@{linkedService().sourceBaseURL}"
 		},
 		"containerUri": {
 			"value": ""
