@@ -1,0 +1,88 @@
+{
+	"name": "df_transform_hospital_admissions",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "ds_raw_hospital_admission",
+						"type": "DatasetReference"
+					},
+					"name": "HospitalAdmissionSource"
+				},
+				{
+					"dataset": {
+						"referenceName": "ds_country_lookup",
+						"type": "DatasetReference"
+					},
+					"name": "CountrySource"
+				}
+			],
+			"sinks": [],
+			"transformations": [
+				{
+					"name": "SelectRequiredColumns"
+				},
+				{
+					"name": "LookupCountry"
+				},
+				{
+					"name": "SelectRequiredColumns2"
+				}
+			],
+			"scriptLines": [
+				"source(output(",
+				"          country as string,",
+				"          indicator as string,",
+				"          date as date,",
+				"          year_week as string,",
+				"          value as double,",
+				"          source as string,",
+				"          url as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> HospitalAdmissionSource",
+				"source(output(",
+				"          country as string,",
+				"          country_code_2_digit as string,",
+				"          country_code_3_digit as string,",
+				"          continent as string,",
+				"          population as string",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> CountrySource",
+				"HospitalAdmissionSource select(mapColumn(",
+				"          country,",
+				"          indicator,",
+				"          reported_date = date,",
+				"          reported_year_week = year_week,",
+				"          value,",
+				"          source",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectRequiredColumns",
+				"SelectRequiredColumns, CountrySource lookup(SelectRequiredColumns@country == CountrySource@country,",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> LookupCountry",
+				"LookupCountry select(mapColumn(",
+				"          country = SelectRequiredColumns@country,",
+				"          indicator,",
+				"          reported_date,",
+				"          reported_year_week,",
+				"          value,",
+				"          source,",
+				"          country = CountrySource@country,",
+				"          country_code_2_digit,",
+				"          country_code_3_digit,",
+				"          population",
+				"     ),",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> SelectRequiredColumns2"
+			]
+		}
+	}
+}
