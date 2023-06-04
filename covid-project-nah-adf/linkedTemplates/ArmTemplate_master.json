@@ -39,7 +39,7 @@
 			"type": "string",
 			"defaultValue": "@{linkedService().sourceBaseURL}"
 		},
-		"tr_ingest_population_data_properties_typeProperties_scope": {
+		"tr_population_data_arrived_properties_typeProperties_scope": {
 			"type": "string",
 			"defaultValue": "/subscriptions/899bd514-6486-4374-93e7-059b48eb5161/resourceGroups/covid-reporting-rg/providers/Microsoft.Storage/storageAccounts/covidprojectnahsa"
 		},
@@ -112,8 +112,8 @@
 					"ls_hdi_covid_cluster_properties_typeProperties_userName": {
 						"value": "[parameters('ls_hdi_covid_cluster_properties_typeProperties_userName')]"
 					},
-					"tr_ingest_population_data_properties_typeProperties_scope": {
-						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"
+					"tr_population_data_arrived_properties_typeProperties_scope": {
+						"value": "[parameters('tr_population_data_arrived_properties_typeProperties_scope')]"
 					}
 				}
 			},
