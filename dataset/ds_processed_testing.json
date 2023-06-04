@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"folderPath": "ecdc/testing",
+				"fileName": "000000_0",
+				"folderPath": "ecdc/testing//base_0000001",
 				"fileSystem": "processed"
 			},
 			"columnDelimiter": ",",
