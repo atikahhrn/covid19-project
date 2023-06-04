@@ -19,6 +19,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accessToken' of 'ls_db_covid_cluster'"
 		},
+		"ls_hdi_covid_cluster_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_hdi_covid_cluster'"
+		},
 		"ls_sql_covid_db_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_sql_covid_db'"
@@ -26,6 +30,10 @@
 		"ls_adls_covidprojectdl_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://covidprojectnahdl.dfs.core.windows.net/"
+		},
+		"ls_hdi_covid_cluster_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "admin"
 		},
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 			"type": "string",
@@ -97,6 +105,12 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_hdi_covid_cluster_password": {
+						"value": "[parameters('ls_hdi_covid_cluster_password')]"
+					},
+					"ls_hdi_covid_cluster_properties_typeProperties_userName": {
+						"value": "[parameters('ls_hdi_covid_cluster_properties_typeProperties_userName')]"
 					},
 					"tr_ingest_population_data_properties_typeProperties_scope": {
 						"value": "[parameters('tr_ingest_population_data_properties_typeProperties_scope')]"

@@ -14,11 +14,17 @@
 		"ls_db_covid_cluster_accessToken": {
 			"value": ""
 		},
+		"ls_hdi_covid_cluster_password": {
+			"value": ""
+		},
 		"ls_sql_covid_db_connectionString": {
 			"value": ""
 		},
 		"ls_adls_covidprojectdl_properties_typeProperties_url": {
 			"value": "https://covidprojectnahdl.dfs.core.windows.net/"
+		},
+		"ls_hdi_covid_cluster_properties_typeProperties_userName": {
+			"value": "admin"
 		},
 		"ls_http_opendata_ecdc_europa_eu_properties_typeProperties_url": {
 			"value": "@{linkedService().sourceBaseURL}"
