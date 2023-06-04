@@ -185,6 +185,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"folder": {
+					"name": "Ingest"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -395,6 +398,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"folder": {
+					"name": "Ingest"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -446,6 +452,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"folder": {
+					"name": "Process"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -482,6 +491,9 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "Process"
 				},
 				"annotations": []
 			},
@@ -523,6 +535,9 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "Process"
 				},
 				"annotations": []
 			},
@@ -572,6 +587,9 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "Process"
 				},
 				"annotations": []
 			},
@@ -647,6 +665,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"folder": {
+					"name": "Sqlize"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -721,6 +742,9 @@
 				"policy": {
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
+				},
+				"folder": {
+					"name": "Sqlize"
 				},
 				"annotations": []
 			},
@@ -910,6 +934,9 @@
 					"elapsedTimeMetric": {},
 					"cancelAfter": {}
 				},
+				"folder": {
+					"name": "Sqlize"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -925,6 +952,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "lookup"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -975,6 +1005,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "lookup"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -1054,6 +1087,9 @@
 					"referenceName": "ls_ablob_covidprojectsa",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "lookup"
+				},
 				"annotations": [],
 				"type": "Json",
 				"typeProperties": {
@@ -1092,6 +1128,9 @@
 					"fileName": {
 						"type": "string"
 					}
+				},
+				"folder": {
+					"name": "raw"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -1139,6 +1178,9 @@
 						"type": "string"
 					}
 				},
+				"folder": {
+					"name": "raw"
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
@@ -1168,6 +1210,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_ablob_covidprojectsa",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "raw"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -1199,6 +1244,9 @@
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "raw"
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
@@ -1228,6 +1276,9 @@
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "processed"
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
@@ -1255,6 +1306,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "processed"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -1284,6 +1338,9 @@
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "processed"
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
@@ -1311,6 +1368,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "processed"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -1376,6 +1436,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "raw"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -1443,6 +1506,9 @@
 					"referenceName": "ls_adls_covidprojectdl",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "raw"
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
@@ -1501,6 +1567,9 @@
 					"referenceName": "ls_sql_covid_db",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "sql"
+				},
 				"annotations": [],
 				"type": "AzureSqlTable",
 				"schema": [
@@ -1558,6 +1627,9 @@
 					"referenceName": "ls_sql_covid_db",
 					"type": "LinkedServiceReference"
 				},
+				"folder": {
+					"name": "sql"
+				},
 				"annotations": [],
 				"type": "AzureSqlTable",
 				"schema": [
@@ -1614,6 +1686,9 @@
 				"linkedServiceName": {
 					"referenceName": "ls_sql_covid_db",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "sql"
 				},
 				"annotations": [],
 				"type": "AzureSqlTable",
